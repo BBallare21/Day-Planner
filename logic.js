@@ -7,54 +7,87 @@ $('#currentDay').text(date);
 let time = moment().format('LT');
 $('#currentTime').text(time);
 
-let current = moment().format('ha');
+let current = parseInt(moment().format('HH'));
 console.log(current);
-let setTime = $('.hour').text();
-console.log(setTime);
+let time1 = parseInt($('#time1').attr('data-hour'));
+console.log(time1);
+let time2 = parseInt($('#time2').attr('data-hour'));
+console.log(time2);
 
-function getClass() {
-    if (setTime === current) {
-        $('textarea').addClass('present')
+function getClass1() {
+    if (time1 === current) {
+        $('#area1').css({
+            'background-color': '#ff6961',
+            'color': 'white'
+          })
     }
-    else if (setTime < current) {
-        $('textarea').addClass('past')
+    else if (time1 < current) {
+        $('#area1').css({
+            'background-color': '#d3d3d3',
+            'color': 'white'
+    })
     }
     else {
-        $('textarea').addClass('future')
+        $('#area1').css({
+            'background-color': '#77dd77',
+            'color': 'white'
+          })
     
-        }    
+        }
 };
 
-getClass();
+function getClass2() {
+    if (time2 === current) {
+        $('#area2').css({
+            'background-color': '#ff6961',
+            'color': 'white'
+          })
+    }
+    else if (time2 < current) {
+        $('#area2').css({
+            'background-color': '#d3d3d3',
+            'color': 'white'
+    })
+}
+    else {
+        $('#area2').css({
+            'background-color': '#77dd77',
+            'color': 'white'
+          })
+    }
+}
+
+getClass1();
+getClass2();
 
 
 
-$('.saveBtn').on('click', function (event) {
-event.preventDefault();
+// $('.saveBtn').on('click', function (event) {
+// event.preventDefault();
 
-let area1 = $('#area1');
-let area2 = $('#area2');
-let area3 = $('#area3');
-let area4 = $('#area4');
-let area5 = $('#area5');
-let area6 = $('#area6');
-let area7 = $('#area7');
-let area8 = $('#area8');
-let area9 = $('#area9');
+// let area1 = $('#area1');
+// let area2 = $('#area2');
+// let area3 = $('#area3');
+// let area4 = $('#area4');
+// let area5 = $('#area5');
+// let area6 = $('#area6');
+// let area7 = $('#area7');
+// let area8 = $('#area8');
+// let area9 = $('#area9');
 
 
-let air1 = area1.value;
-let air2 = area2.value;
-let air3 = area3.value;
-let air4 = area4.value;
-let air5 = area5.value;
-let air6 = area6.value;
-let air7 = area7.value;
-let air8 = area8.value;
-let air9 = area9.value;
+// let air1 = area1.value;
+// let air2 = area2.value;
+// let air3 = area3.value;
+// let air4 = area4.value;
+// let air5 = area5.value;
+// let air6 = area6.value;
+// let air7 = area7.value;
+// let air8 = area8.value;
+// let air9 = area9.value;
 
-console.log(air1);
-localStorage.setItem('air1', JSON.stringify(air1));
+// console.log(air1);
+// localStorage.setItem('air1', JSON.stringify(air1));
 // console.log(air2);
 // console.log(air3);
 // console.log(air4);
@@ -66,5 +99,5 @@ localStorage.setItem('air1', JSON.stringify(air1));
 // localStorage.setItem('info', info);
 
 // localStorage.getItem(info)
-})
+// })
 });
