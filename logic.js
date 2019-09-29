@@ -14,51 +14,30 @@ console.log(time1);
 let time2 = parseInt($('#time2').attr('data-hour'));
 console.log(time2);
 
-function getClass1() {
     if (time1 === current) {
-        $('#area1').css({
-            'background-color': '#ff6961',
-            'color': 'white'
-          })
+        $('.description').addClass('present')
     }
     else if (time1 < current) {
-        $('#area1').css({
-            'background-color': '#d3d3d3',
-            'color': 'white'
-    })
+        $('.description').addClass('past')
     }
     else {
-        $('#area1').css({
-            'background-color': '#77dd77',
-            'color': 'white'
-          })
+        $('.description').addClass('future')
     
         }
-};
 
-function getClass2() {
     if (time2 === current) {
-        $('#area2').css({
-            'background-color': '#ff6961',
-            'color': 'white'
-          })
+        $('.description').addClass('present')
     }
     else if (time2 < current) {
-        $('#area2').css({
-            'background-color': '#d3d3d3',
-            'color': 'white'
-    })
+        $('.description').addClass('past')
 }
     else {
-        $('#area2').css({
-            'background-color': '#77dd77',
-            'color': 'white'
-          })
+        $('.description').addClass('future')
     }
-}
 
-getClass1();
-getClass2();
+
+
+
 
 
 
