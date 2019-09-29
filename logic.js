@@ -101,10 +101,19 @@ console.log(current);
     }
 
 
-// $('.saveBtn').on('click', function (event) {
-// event.preventDefault();
+$('#save1').on('click', function (event) {
+event.preventDefault();
+let area1 = $('#area1');
 
-// let area1 = $('#area1');
+let air1 = area1.value;
+
+console.log(air1);
+
+localStorage.setItem('task', JSON.stringify(air1));
+})
+});
+
+
 // let area2 = $('#area2');
 // let area3 = $('#area3');
 // let area4 = $('#area4');
@@ -115,7 +124,7 @@ console.log(current);
 // let area9 = $('#area9');
 
 
-// let air1 = area1.value;
+
 // let air2 = area2.value;
 // let air3 = area3.value;
 // let air4 = area4.value;
@@ -125,8 +134,8 @@ console.log(current);
 // let air8 = area8.value;
 // let air9 = area9.value;
 
-// console.log(air1);
-// localStorage.setItem('air1', JSON.stringify(air1));
+
+
 // console.log(air2);
 // console.log(air3);
 // console.log(air4);
@@ -138,5 +147,3 @@ console.log(current);
 // localStorage.setItem('info', info);
 
 // localStorage.getItem(info)
-// })
-});
