@@ -9,36 +9,96 @@ $('#currentTime').text(time);
 
 let current = parseInt(moment().format('HH'));
 console.log(current);
-let time1 = parseInt($('#time1').attr('data-hour'));
-console.log(time1);
-let time2 = parseInt($('#time2').attr('data-hour'));
-console.log(time2);
 
-    if (time1 === current) {
-        $('.description').addClass('present')
+    if (9 === current) {
+        $('#area1').addClass('present')
     }
-    else if (time1 < current) {
-        $('.description').addClass('past')
+    else if (9 < current) {
+        $('#area1').addClass('past')
     }
     else {
-        $('.description').addClass('future')
-    
-        }
-
-    if (time2 === current) {
-        $('.description').addClass('present')
+        $('#area1').addClass('future')
     }
-    else if (time2 < current) {
-        $('.description').addClass('past')
+
+    if (10 === current) {
+        $('#area2').addClass('present')
+    }
+    else if (10 < current) {
+        $('#area2').addClass('past')
+    }
+    else {
+        $('#area2').addClass('future')
+    }
+
+    if (11 === current) {
+        $('#area3').addClass('present')
+    }
+    else if (11 < current) {
+        $('#area3').addClass('past')
+    }
+    else {
+        $('#area3').addClass('future')
+    }
+
+    if (12 === current) {
+        $('#area4').addClass('present')
+    }
+    else if (12 < current) {
+        $('#area4').addClass('past')
+    }
+    else {
+        $('#area4').addClass('future')
+    }
+
+    if (13 === current) {
+        $('#area5').addClass('present')
+    }
+    else if (13 < current) {
+        $('#area5').addClass('past')
+    }
+    else {
+        $('#area5').addClass('future')
+    }
+
+    if (14 === current) {
+        $('#area6').addClass('present')
+    }
+    else if (14 < current) {
+        $('#area6').addClass('past')
 }
     else {
-        $('.description').addClass('future')
+        $('#area6').addClass('future')
     }
 
+    if (15 === current) {
+        $('#area7').addClass('present')
+    }
+    else if (15 < current) {
+        $('#area7').addClass('past')
+    }
+    else {
+        $('#area7').addClass('future')
+    }
 
+    if (16 === current) {
+        $('#area8').addClass('present')
+    }
+    else if (16 < current) {
+        $('#area8').addClass('past')
+    }
+    else {
+        $('#area8').addClass('future')
+    }
 
-
-
+    if (17 === current) {
+        $('#area9').addClass('present')
+    }
+    else if (17 < current) {
+        $('#area9').addClass('past')
+    }
+    else {
+        $('#area9').addClass('future')
+    }
 
 
 // $('.saveBtn').on('click', function (event) {
