@@ -101,15 +101,20 @@ console.log(current);
     }
 
 
-$('#save1').on('click', function (event) {
+$('.saveBtn').on('click', function (event) {
 event.preventDefault();
-let area1 = $('#area1');
+console.log($(this).attr('id')) // 'save1'
+let clicked = $(this).attr('id'); // specific btn clicked and it's id attribute's value === 'save1'
+let number = clicked.length - 1; // create reference to grab number at end of string (b/c '1' is at 4th index)
+let id = clicked[number];
+let area = $(`#area${id}`);
 
-let air1 = area1.value;
+let air = area.val();
 
-console.log(air1);
+console.log(air);
 
-localStorage.setItem('task', JSON.stringify(air1));
+localStorage.setItem(id, JSON.stringify(air));
+
 })
 });
 
